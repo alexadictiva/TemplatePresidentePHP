@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: normal 1.7rem/2rem "Inter", sans-serif;
+  position: relative;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.wrapperMain {
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 60px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 10;
+}
+
+header .wrapperHeader {
+  margin: auto;
+  max-width: 1024px;
+  background: #000000;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .wrapperHeader .brandContainer {
+  padding-left: 20px;
+  width: 50%;
+}
+
+header .wrapperHeader .brandContainer img {
+  height: 100%;
+}
+
+header .wrapperHeader .menuContainer {
+  width: 50%;
+  text-align: end;
+}
+
+header .wrapperHeader .menuContainer .menuButton {
+  padding-right: 10px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+header .wrapperHeader .menuContainer .menuContent {
+  position: relative;
+  width: 50vw;
+}
+
+header .wrapperHeader .menuContainer .menuContent .menu {
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  top: 17px;
+  right: -768px;
+  height: 100vh;
+  background-color: #000000;
+  -webkit-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+}
+
+header .wrapperHeader .menuContainer .menuContent .menu .menuItem {
+  padding: 20px;
+}
+
+header .wrapperHeader .menuContainer .menuContent .menu .menuItem a {
+  color: #ffffff;
+}
+
+header .wrapperHeader .menuContainer .menuContent .show {
+  right: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .wrapperHeader .brandContainer {
+    width: 25%;
+  }
+  header .wrapperHeader .menuContainer {
+    width: 75%;
+  }
+  header .wrapperHeader .menuContainer .menuButton {
+    display: none;
+  }
+  header .wrapperHeader .menuContainer .menuContent {
+    position: relative;
+    width: 100%;
+  }
+  header .wrapperHeader .menuContainer .menuContent .menu {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    position: static;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.bannerContainer .swiper-container .swiper-wrapper .swiper-slide picture img {
+  height: 90vh;
+  width: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
+          clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
+}
+
+.aboutContainer {
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.aboutContainer .aboutDescription {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.aboutContainer .aboutCard {
+  padding: 20px;
+  background: #000000;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.aboutContainer .aboutCard .cardContent {
+  background-color: #1a1a1a;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.aboutContainer .aboutCard .cardContent ul {
+  padding-left: 25px;
+}
+
+.aboutContainer .aboutCard .cardContent ul li {
+  font: bold 1.9rem/3rem "Inter", sans-serif;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutContainer {
+    padding: 40px 60px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutContainer .aboutDescription,
+  .aboutContainer .aboutCard {
+    width: 50%;
+  }
+}
+
+.philosophyContainer {
+  padding: 20px 0;
+}
+
+.philosophyContainer .philosophyDescription {
+  padding: 20px;
+  background-color: #3e3e3e;
+}
+
+.philosophyContainer .philosophyDescription p {
+  padding: 20px;
+  background-color: #525252;
+  color: #ffffff;
+}
+
+.philosophyContainer .founderContainer {
+  background-color: #3e3e3e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.philosophyContainer .founderContainer .founderImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.philosophyContainer .founderContainer .founderDescription {
+  padding: 20px;
+}
+
+.philosophyContainer .founderContainer .founderDescription p:nth-child(1) {
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #000000;
+}
+
+.philosophyContainer .founderContainer .founderDescription p:nth-child(3) {
+  font-style: italic;
+}
+
+.philosophyContainer .founderContainer .founderDescription h3,
+.philosophyContainer .founderContainer .founderDescription a {
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #000000;
+}
+
+.philosophyContainer .founderContainer .founderDescription h3 {
+  margin-bottom: 5px;
+}
+
+.philosophyContainer .founderContainer .founderDescription a {
+  display: inline-block;
+  margin-bottom: 15px;
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+}
+
+.philosophyContainer .founderContainer .founderDescription p {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .philosophyContainer .founderContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .philosophyContainer .founderContainer .founderImg {
+    width: 50%;
+  }
+  .philosophyContainer .founderContainer .founderDescription {
+    width: 50%;
+  }
+}
+
+.teamContainer .directorioContainer,
+.teamContainer .managementContainer {
+  padding: 10px 20px;
+}
+
+.teamContainer .directorioContainer h3,
+.teamContainer .managementContainer h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.teamContainer .swiper-container {
+  width: 100%;
+}
+
+.teamContainer .swiper-container .swiper-wrapper {
+  margin-bottom: 40px;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  margin-right: 20px;
+  padding: 20px;
+  font-size: 18px;
+  background: #ffffff;
+  border-bottom: solid #3e3e3e 5px;
+  position: relative;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide .overlay {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide .overlay div {
+  border-radius: 50%;
+  border: 5px #ffffff solid;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide .overlay div a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide:hover .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide h4 {
+  font: bold 1.7rem/2rem "Inter", sans-serif;
+}
+
+.teamContainer .swiper-container .swiper-wrapper .swiper-slide p {
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+#timelineContainer {
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#timelineContainer #timelineContent {
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 410px;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar-track:horizontal {
+  background-color: transparent;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+#timelineContainer #timelineContent #timeline {
+  position: relative;
+}
+
+#timelineContainer #timelineContent #timeline hr {
+  position: absolute;
+  top: 193px;
+  width: 100%;
+  border: 2px #000000 solid;
+  background-color: #000000;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem {
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem a {
+  font: bold 5rem/6rem "Inter", sans-serif;
+  color: #000000;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  scroll-snap-align: center;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem a:hover ~ div {
+  opacity: 1;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div {
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #000000;
+  width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  position: absolute;
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent {
+  padding-left: 15px;
+  display: block;
+  list-style: none;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent li {
+  margin: 0;
+  position: relative;
+  padding: 2.5px 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent li::before {
+  content: url(./../assets/icons/crossBlack.svg);
+  position: absolute;
+  left: -20px;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) {
+  margin: 197px 100px 0 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) a:hover {
+  border-top: 3px solid #000000;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) div {
+  top: 70px;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) {
+  margin: 130px 100px 0 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) a {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) a:hover {
+  border-bottom: 3px solid #000000;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) div {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  top: -120px;
+  left: -20px;
+}
+
+#timelineContainer .buttonCotaniner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#timelineContainer .buttonCotaniner button {
+  margin-right: 10px;
+  border: 0;
+  outline: none;
+  background: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cronologyContainer {
+  padding: 40px 20px;
+  background-color: #3e3e3e;
+}
+
+.cronologyContainer .cronologyContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.cronologyContainer .cronologyContent .cronologyCard img {
+  border-bottom: #ffffff solid 4px;
+  margin-bottom: 5px;
+}
+
+.cronologyContainer .cronologyContent .cronologyCard h3 {
+  color: #ffffff;
+  font: bold 3rem/4rem "Inter", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .cronologyContainer {
+    padding: 40px;
+  }
+  .cronologyContainer .cronologyContent {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cronologyContainer .cronologyContent .cronologyCard {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cronologyContainer {
+    padding: 80px;
+  }
+  .cronologyContainer .cronologyContent {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cronologyContainer .cronologyContent .cronologyCard {
+    width: 22%;
+  }
+}
+
+.portfolioContainer {
+  padding: 20px 0;
+  background-color: #000000;
+}
+
+.portfolioContainer .portfolioContent {
+  padding: 40px 0;
+}
+
+.portfolioContainer .portfolioContent p {
+  padding: 5px 40px;
+  font: bold 2.2rem/2.9rem "Inter", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.portfolioContainer .portfolioContent p a {
+  color: #ffffff;
+}
+
+.portfolioContainer .portfolioContent p::before {
+  content: url(./../assets/icons/crossBlack.svg);
+  color: #000000;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+
+.portfolioContainer .portfolioContent p:hover {
+  background-color: #ffffff;
+}
+
+.portfolioContainer .portfolioContent p:hover a {
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolioContainer .portfolioContent p {
+    font: bold 5rem/6rem "Inter", sans-serif;
+  }
+  .portfolioContainer .portfolioContent p::before {
+    left: 10px;
+    top: -3px;
+  }
+}
+
+.footerContainer {
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.footerContainer .formContainer h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footerContainer .formContainer form label {
+  font: bold 1.7rem/2rem "Inter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.footerContainer .formContainer form input {
+  margin: 10px 0 20px;
+  outline: none;
+  border: 1px #000000 solid;
+  height: 40px;
+  width: 100%;
+}
+
+.footerContainer .formContainer form textarea {
+  outline: none;
+  border: 1px #000000 solid;
+  height: 100px;
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+.footerContainer .formContainer form p {
+  margin-bottom: 20px;
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+}
+
+.footerContainer .formContainer form button {
+  outline: none;
+  border: 0;
+  text-transform: uppercase;
+  font: bold 1.5rem/2rem "Inter", sans-serif;
+  background-color: #000000;
+  height: 40px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.footerContainer .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          
+}
+
+.footerContainer .contactContainer div {
+  background-color: #3e3e3e;
+  padding: 20px;
+  align-self: flex-end;
+  
+}
+.contactContainer div{
+  align-self: flex-end;
+}
+.footerContainer .contactContainer div div {
+  padding: 20px;
+}
+
+.footerContainer .contactContainer div div p {
+  color: #ffffff;
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+  margin-bottom: 5px;
+}
+
+.footerContainer .contactContainer div .mailContainer {
+  padding: 0 20px 20px;
+  color: #ffffff;
+  font: normal 1.2rem/1.5rem "Inter", sans-serif;
+}
+
+.footerContainer .contactContainer div .mailContainer span {
+  display: block;
+}
+
+.footerContainer .contactContainer div .mailContainer span a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .footerContainer {
+    padding: 40px 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footerContainer .formContainer {
+    width: 50%;
+  }
+  .footerContainer .contactContainer {
+    width: 50%;
+  }
+ 
+}
